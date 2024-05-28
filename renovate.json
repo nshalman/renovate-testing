@@ -5,7 +5,7 @@
     {
       "matchDatasources": ["docker"],
       "matchPackagePatterns": ["quay.io/packet/"],
-      "versioning": "regex:^(?<major>\\d+)-(?<revision>[\\da-f]+)$"
+      "versioning": "regex:^sha-(?<revision>[\\da-f]+)$"
     }
   ]
 }
