@@ -2,6 +2,9 @@
   "extends": ["config:base", "regexManagers:dockerfileVersions"],
   "regexManagers": [
     {
+      "fileMatch": [
+        "Dockerfile"
+      ],
       "currentValueTemplate": "main",
       "depNameTemplate": "cacher",
       "packageNameTemplate": "https://github.com/packethost/cacher",
