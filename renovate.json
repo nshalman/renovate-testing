@@ -1,4 +1,11 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", "group:allNonMajor"]
+  "extends": ["config:base", "regexManagers:dockerfileVersions"],
+  "regexManagers": [
+    {
+      "currentValueTemplate": "main",
+      "depNameTemplate": "cacher",
+      "packageNameTemplate": "https://github.com/packethost/cacher",
+      "datasourceTemplate": "git-refs"
+    }
+  ]
 }
