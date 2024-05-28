@@ -1,14 +1,13 @@
 {
-  "extends": ["config:base", "regexManagers:dockerfileVersions"],
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "Dockerfile"
-      ],
-      "currentValueTemplate": "main",
-      "depNameTemplate": "cacher",
-      "packageNameTemplate": "https://github.com/packethost/cacher",
-      "datasourceTemplate": "git-refs"
-    }
-  ]
+  "extends": [
+    "config:base",
+    ":docker"
+  ],
+  "docker": {
+    "enabled": true,
+    "baseImageUpdates": true,
+    "baseImageReleases": [
+      "quay.io/packet/cacher"
+    ]
+  }
 }
